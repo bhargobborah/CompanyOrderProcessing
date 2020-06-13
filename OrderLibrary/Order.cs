@@ -1,11 +1,4 @@
-﻿using System;
-using System.CodeDom;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OrderLibrary
+﻿namespace OrderLibrary
 {
     public abstract class Order
     {
@@ -20,6 +13,7 @@ namespace OrderLibrary
         {
             this.ProductName = productName;
         }
+
         // Abstract method for implementation
         public abstract void GenerateOrder();
     }

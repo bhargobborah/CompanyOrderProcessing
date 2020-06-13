@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace OrderLibrary.OrderImplemention
 {
@@ -16,6 +12,7 @@ namespace OrderLibrary.OrderImplemention
             this.productName = productName;
         }
 
+        /* Thread is used to just to simulate a delay(in real case actual functinality will happen here)*/
         public override void GenerateOrder()
         {
             Console.WriteLine($"GenerateOrder: Commision payment to the agent slip is generating for {this.productName}...");

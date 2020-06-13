@@ -1,10 +1,6 @@
 ﻿using OrderLibrary;
 using OrderLibrary.OrderImplemention;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OrderUI
 {
@@ -12,6 +8,7 @@ namespace OrderUI
     {
         static void Main(string[] args)
         {
+            // Menu based selection 
             Console.WriteLine("Select any number from 1-6 for the Payment type");
             Console.WriteLine("-----------------------------------------------");
 
@@ -35,35 +32,45 @@ namespace OrderUI
                     order = new PhysicalProductOrder("Physical Product");
                     order.GenerateOrder();
                     break;
+
                 case "2":
                     order = new BookOrder("Book");
                     order.GenerateOrder();
                     break;
+
                 case "3":
                     order = new AddMembershipOrder("Add Membership");
                     order.GenerateOrder();
                     break;
+
                 case "4":
                     order = new AddMembershipOrder("Upgrade Membership");
                     order.GenerateOrder();
                     break;
+
                 case "5":
                     order = new MembershipOrUpgradeOrder("Membership or Upgrade");
                     order.GenerateOrder();
                     break;
+
                 case "6":
                     order = new VideoAddingOrder("Learning to Ski");
                     order.GenerateOrder();
                     break;
+
                 case "7":
                     order = new PhysicalProductOrBookOrder("Physical product Or Book");
                     order.GenerateOrder();
                     break;
 
+                default:
+                    Console.WriteLine("Wrong selection, select within range.");
+                    break;
+
             }
 
-
-
+            Console.WriteLine();
+            Console.WriteLine("Press any key to close the console window.");
             Console.ReadLine();
         }
     }
