@@ -12,13 +12,13 @@ namespace OrderLibrary.OrderImplemention
             this.productName = productName;
         }
 
-        public override void GenerateOrder()
+        public override string GenerateOrder()
         {
             Console.WriteLine($"GenerateOrder: {this.productName} is in process...");
             Thread.Sleep(2000);
             Console.WriteLine($"Email is send to the owner and informed them for {this.productName}.");
             Thread.Sleep(2000);
-            Console.WriteLine($"GenerateOrder: {this.productName} is completed.");
+            return $"GenerateOrder: {this.productName} is completed.";
         }
     }
 }

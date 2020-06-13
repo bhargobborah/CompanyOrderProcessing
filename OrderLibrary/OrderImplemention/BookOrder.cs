@@ -12,11 +12,11 @@ namespace OrderLibrary.OrderImplemention
             this.productName = productName;
         }
 
-        public override void GenerateOrder()
+        public override string GenerateOrder()
         {
             Console.WriteLine($"GenerateOrder: Generating duplicate packing slip for royalty department for item {this.productName}...");
             Thread.Sleep(2000);
-            Console.WriteLine($"GenerateOrder: Packing slip for royalty department is generated for item {this.productName}.");
+            return $"GenerateOrder: Packing slip for royalty department is generated for item {this.productName}.";
 
 
         }

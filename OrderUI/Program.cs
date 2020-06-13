@@ -25,12 +25,14 @@ namespace OrderUI
 
             // Create order object
             Order order = null;
+            string result = string.Empty;
 
             switch (keyPressed)
             {
                 case "1":
                     order = new PhysicalProductOrder("Physical Product");
-                    order.GenerateOrder();
+                    result = order.GenerateOrder();
+
                     break;
 
                 case "2":
@@ -68,10 +70,15 @@ namespace OrderUI
                     break;
 
             }
-
+            Console.WriteLine(result);
             Console.WriteLine();
+
+
             Console.WriteLine("Press any key to close the console window.");
             Console.ReadLine();
         }
+
+
+
     }
 }

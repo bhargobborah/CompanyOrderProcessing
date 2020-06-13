@@ -12,11 +12,11 @@ namespace OrderLibrary.OrderImplemention
             this.productName = productName;
         }
 
-        public override void GenerateOrder()
+        public override string GenerateOrder()
         {
             Console.WriteLine($"GenerateOrder: {this.productName} is in process...");
             Thread.Sleep(2000);
-            Console.WriteLine($"GenerateOrder: {this.productName} is completed.");
+            return $"GenerateOrder: {this.productName} is completed.";
         }
     }
 }

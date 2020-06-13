@@ -15,6 +15,6 @@
         }
 
         // Abstract method for implementation
-        public abstract void GenerateOrder();
+        public abstract string GenerateOrder();
     }
 }

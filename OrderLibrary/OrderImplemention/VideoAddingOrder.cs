@@ -12,12 +12,12 @@ namespace OrderLibrary.OrderImplemention
             this.productName = productName;
         }
 
-        public override void GenerateOrder()
+        public override string GenerateOrder()
         {
             Console.WriteLine($"GenerateOrder: 'First aid video' is adding to the packing slip for payment for the video {this.productName}...");
             Thread.Sleep(2000);
 
-            Console.WriteLine($"GenerateOrder: 'First aid video' is added to the packing slip for payment for the video {this.productName}.");
+            return $"GenerateOrder: 'First aid video' is added to the packing slip for payment for the video {this.productName}.";
         }
     }
 }
