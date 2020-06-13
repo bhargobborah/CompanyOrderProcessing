@@ -1,19 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace OrderLibrary.OrderImplemention
 {
     public class BookOrder : Order
     {
+        private readonly string productName = string.Empty;
+
+        public BookOrder(string productName) : base(productName)
+        {
+            this.productName = productName;
+        }
+
         public override void GenerateOrder()
         {
-            Console.WriteLine("GenerateOrder: Generating duplicate packing slip for royalty department...");
+            Console.WriteLine($"GenerateOrder: Generating duplicate packing slip for royalty department for item {this.productName}...");
             Thread.Sleep(2000);
-            Console.WriteLine("GenerateOrder: Packing slip for royalty department is generated.");
+            Console.WriteLine($"GenerateOrder: Packing slip for royalty department is generated for item {this.productName}.");
+
+
         }
     }
 }

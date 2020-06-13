@@ -42,8 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Order.cs" />
+    <Compile Include="OrderImplemention\AddMembershipOrder.cs" />
     <Compile Include="OrderImplemention\BookOrder.cs" />
+    <Compile Include="OrderImplemention\MembershipOrUpgradeOrder.cs" />
+    <Compile Include="OrderImplemention\PhysicalProductOrBookOrder.cs" />
     <Compile Include="OrderImplemention\PhysicalProductOrder.cs" />
+    <Compile Include="OrderImplemention\UpgradeMembership.cs" />
+    <Compile Include="OrderImplemention\VideoAddingOrder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

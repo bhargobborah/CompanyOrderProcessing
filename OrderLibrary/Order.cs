@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,10 @@ namespace OrderLibrary
         public decimal ProductPrice { get; set; }
 
 
+        public Order(string productName)
+        {
+            this.ProductName = productName;
+        }
         // Abstract method for implementation
         public abstract void GenerateOrder();
     }

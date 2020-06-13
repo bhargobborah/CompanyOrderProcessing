@@ -19,8 +19,9 @@ namespace OrderUI
             Console.WriteLine("2. Book");
             Console.WriteLine("3. Add Membership");
             Console.WriteLine("4. Upgrade Membership");
-            Console.WriteLine("5. Learning to Ski");
-            Console.WriteLine("6. Physical product Or Book");
+            Console.WriteLine("5. Membership or Upgrade");
+            Console.WriteLine("6. Learning to Ski");
+            Console.WriteLine("7. Physical product Or Book");
             Console.WriteLine("-----------------------------------------------");
 
             var keyPressed = Console.ReadLine();
@@ -31,11 +32,31 @@ namespace OrderUI
             switch (keyPressed)
             {
                 case "1":
-                    order = new PhysicalProductOrder();
+                    order = new PhysicalProductOrder("Physical Product");
                     order.GenerateOrder();
                     break;
                 case "2":
-                    order = new BookOrder();
+                    order = new BookOrder("Book");
+                    order.GenerateOrder();
+                    break;
+                case "3":
+                    order = new AddMembershipOrder("Add Membership");
+                    order.GenerateOrder();
+                    break;
+                case "4":
+                    order = new AddMembershipOrder("Upgrade Membership");
+                    order.GenerateOrder();
+                    break;
+                case "5":
+                    order = new MembershipOrUpgradeOrder("Membership or Upgrade");
+                    order.GenerateOrder();
+                    break;
+                case "6":
+                    order = new VideoAddingOrder("Learning to Ski");
+                    order.GenerateOrder();
+                    break;
+                case "7":
+                    order = new PhysicalProductOrBookOrder("Physical product Or Book");
                     order.GenerateOrder();
                     break;
 
