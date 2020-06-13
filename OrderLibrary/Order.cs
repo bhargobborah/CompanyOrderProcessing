@@ -15,13 +15,7 @@ namespace OrderLibrary
         public decimal ProductPrice { get; set; }
 
 
-        public Order(int id, string productName)
-        {
-            this.Id = id;
-            this.ProductName = productName;
-        }
-
         // Abstract method for implementation
-        public abstract void GenerateOrder(string paymentType);
+        public abstract void GenerateOrder();
     }
 }
